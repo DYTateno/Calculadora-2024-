@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)file:///C:/Users/Marise%20Miranda/Downloads/Marises%20Machine.html -->
+<html lang="en">
+
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teste Machine</title>
+</head>
+
+<style>
+        body {
+
+                background-image: url(https://i.pinimg.com/originals/16/02/b2/1602b26c05ee78120695d592a68b8912.gif);
+                background-size: 1300px 1300px;
+
+
+
+
+
+
+        }
+
+       
+
+        button {
+                position: fixed;
+                left: 45%;
+                right: 45%;
+                z-index: 2;
+        }
+
+        input {
+
+
+                
+                position: relative;
+                padding: 10px;
+                border-radius: 25px;
+                padding: 20px;
+                z-index: 2;
+                font-size: 2em;
+                font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .obstaculo {
+                position: absolute;
+                background-image: url(https://i.redd.it/my-current-donkey-kong-photoshops-v0-7vko45icaed91.png?width=1920&format=png&auto=webp&s=3aff4fd231468a90bb956e5e6fe80114c78044d9);
+                background-size: contain;
+                background-position: center; 
+                width: 100%; 
+                height: 400px;
+                z-index: 3;
+                display: none;
+                
+}
+
+
+        .demo{
+                position: relative;  
+                z-index: 2;
+                scale:100%;
+                font-size: 2em;
+                font-family: Arial, Helvetica, sans-serif;
+                
+               
+                
+        }
+
+        .botao {
+                
+                position: relative;
+        }
+
+        /* Quadrado preto atrás dos elementos */
+        .overlay {
+
+                position: absolute;
+                top: 10%;
+                left: 25%;
+                width: 50%;
+                height: 70%;
+                background-color: rgba(17, 17, 17, 0.788);
+                background-blend-mode: screen;
+                z-index: 1;
+        }
+
+        span {
+
+                /* texto */
+                font-size: 2em;
+                font-weight: bolder;
+                font-style: italic;
+                unicode-bidi: isolate;
+                color: black;
+                text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+                background-color: rgb(255, 255, 255);
+                background-size: 2000px 2000px;
+
+
+                /* borda arrendondada */
+                border-radius: 25px;
+                padding: 20px;
+                width: 200px;
+                height: 150px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+        }
+
+        b {
+
+
+
+                position: relative;
+                color: white;
+                text-shadow: -1px 0 2px black, 0 1px 2px black, 1px 0 2px black, 0 -1px 2px black;
+                padding: 5px;
+                width: 200px;
+                height: 150px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                z-index: 2;
+        }
+
+        h3 {
+
+
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                position: relative;
+                z-index: 2;
+                font-size: 2em;
+                color: white;
+                text-shadow: -2px 0 2px black, 0 1px 2px black, 1px 0 2px black, 0 -1px 2px black;
+
+
+        }
+</style>
+
+<center>
+        <span>MATRIX Machine</span>
+
+        <div class="obstaculo"></div>
+
+        <br><br>
+
+        <h3>Decimal</h3>
+        <input oninput="converter()" id="demo1" type="number" placeholder="Digite o valor em decimal">
+
+        <br><br>
+
+        <h3>converter para:</h3>
+
+
+        <b>Octal</b>
+        <br>
+        <div style="display: block; background-color: #dcdcdc; border-radius: 5px; padding: 1px; color: rgb(0, 0, 0); width: 15%; min-height: 20px; font-weight: 500;"
+                class="demo" id="demo2"></div>
+
+        <br><br>
+
+        <b>Hexadecimal</b>
+        <br>
+        <div style="display:block none; background-color: #dcdcdc; border-radius: 5px; padding: 1px; color: rgb(7, 7, 7); width: 15%; min-height: 20px; font-weight: 500;"
+                class="demo" id="demo3"></div>
+
+        <br><br>
+
+        <b>Binário</b>
+        <br>
+        <div style="display: block; background-color: #dcdcdc; border-radius: 5px; padding: 1px; color: rgb(5, 5, 5); width: 40%; min-height: 20px; font-weight: 500;"
+                class="demo" id="demo4"></div>
+
+        <br><br>
+
+        
+
+        <!-- botao de converter -->
+         
+        <!-- <button onclick="converter()">Converter</button> -->
+
+        <div class="overlay"></div>
+
+
+</center>
+
+
+
+<script>
+
+
+        function converter() {
+
+                var decimal = Number(demo1.value);
+
+                let octal = decimal.toString(8);
+
+                let hexadecimal = decimal.toString(16);
+
+                let binaria = decimal.toString(2);
+
+                console.log(decimal);
+                console.log(octal);
+                console.log(hexadecimal);
+                console.log(binaria);
+
+                document.getElementById("demo1").innerHTML = ` ${decimal}`;
+                document.getElementById("demo2").innerHTML = ` ${octal}`;
+                document.getElementById("demo3").innerHTML = ` ${hexadecimal}`;
+                document.getElementById("demo4").innerHTML = ` ${binaria}`;
+
+
+        }
+
+        function aparecer_bin() {
+                demo4.style.display = 'block'
+        }
+
+        function aparecer_hexa() {
+                demo3.style.display = 'block'
+        }
+
+        function aparecer_octal() {
+                demo2.style.display = 'block'
+        }
+        document.bgColor = "#00ffff";
+</script>
+</body>
+
+</html>
