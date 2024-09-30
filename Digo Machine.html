@@ -1,231 +1,305 @@
 <!DOCTYPE html>
-<!-- saved from url=(0066)file:///C:/Users/Marise%20Miranda/Downloads/Marises%20Machine.html -->
 <html lang="en">
 
 <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Teste Machine</title>
-</head>
-
-<style>
-        body {
-
-                background-image: url(https://i.pinimg.com/originals/16/02/b2/1602b26c05ee78120695d592a68b8912.gif);
-                background-size: 1300px 1300px;
+        <style>
+                @import url('https://fonts.cdnfonts.com/css/youtube-sans');
 
 
 
+                body {
+                        background-color: #bebebe;
+                        background-size: 1300px 1300px;
+                }
+
+                button {
+                        position: fixed;
+                        left: 45%;
+                        right: 45%;
+                        z-index: 2;
+                }
+
+                select {
+                        position: relative;
+                        bottom: 440px;
+                        width: 40%;
+                        padding: 0;
+                        border-radius: 90px;
+                        padding: 20px;
+                        z-index: 2;
+                        font-size: 2em;
+                        font-family: Arial, Helvetica, sans-serif;
+                        text-align: center;
+                        scale: 50%;
+                }
+
+                input {
+                        position: relative;
+                        width: 40%;
+                        padding: 10px;
+                        border-radius: 25px;
+                        padding: 20px;
+                        z-index: 2;
+                        font-size: 2em;
+                        font-family: Arial, Helvetica, sans-serif;
+                }
 
 
 
-        }
+                .demo {
+                        position: relative;
+                        z-index: 2;
+                        scale: 100%;
+                        font-size: 1em;
+                        font-family: Arial, Helvetica, sans-serif;
+                }
 
-       
+                /* Quadrado preto atrás dos elementos */
+                .overlay {
+                        position: absolute;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 10px;
+                        background-color: rgba(163, 163, 163, 0.897);
+                        mix-blend-mode: multiply;
+                        z-index: 1;
+                }
 
-        button {
-                position: fixed;
-                left: 45%;
-                right: 45%;
-                z-index: 2;
-        }
+                .titulo span {
+                        font-size: 2em;
+                        font-weight: bold;
+                        padding: 10px;
+                        text-align: left;
+                        display: flex;
+                        color: black;
+                        font-family: Youtube Sans;
+                        align-items: end;
 
-        input {
+
+                }
+
+                .titulo span img {
+                        height: 40px;
 
 
-                
-                position: relative;
-                padding: 10px;
-                border-radius: 25px;
-                padding: 20px;
-                z-index: 2;
-                font-size: 2em;
-                font-family: Arial, Helvetica, sans-serif;
 
-        }
 
-        .obstaculo {
-                position: absolute;
-                background-image: url(https://i.redd.it/my-current-donkey-kong-photoshops-v0-7vko45icaed91.png?width=1920&format=png&auto=webp&s=3aff4fd231468a90bb956e5e6fe80114c78044d9);
-                background-size: contain;
-                background-position: center; 
-                width: 100%; 
-                height: 400px;
-                z-index: 3;
-                display: none;
-                
+                }
+
+                .titulo span b {
+                        font-size: 0.6em;
+                        font-weight: 500;
+                        padding: 0px;
+                        display: flex;
+                        color: rgb(117, 117, 117);
+                        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        align-self: flex-end;
+                        text-shadow: none;
+                        margin-left: 240px;
+                        margin-bottom: 20px;
+
+
+
+                }
+
+
+
+                .titulo {
+                        position: relative;
+                        display: flex;
+                        justify-content: start;
+                        background-color: rgb(255, 255, 255);
+
+
+                        padding: 1;
+                        background-size: 200px 200px;
+
+                        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+                }
+
+
+                b {
+                        position: absolute;
+                        color: rgb(255, 255, 255);
+                        text-shadow: -1px 0 2px black, 0 1px 2px black, 1px 0 2px black, 0 -1px 2px black;
+                        display: flex;
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                        z-index: 2;
+                }
+
+                .calculadora b {
+                        position: relative;
+                        gap: 20;
+                        z-index: 2;
+                        justify-content: center;
+                        align-items: center;
+                        display: flex;
+                        flex-direction: column;
+                }
+
+                h3 {
+                        font-family: Verdana, Geneva, Tahoma, sans-serif;
+                        position: relative;
+                        z-index: 2;
+                        font-size: 2em;
+                        color: white;
+                        text-shadow: -2px 0 2px black, 0 1px 2px black, 1px 0 2px black, 0 -1px 2px black;
+                }
+
+                select {
+                        display: flex;
+                        justify-content: flex-end;
+                }
+                .curio {
+    position: fixed;   
+    bottom:-5cap;        
+    left: 20%;        
+    background-image: url(https://storage.builderall.com//franquias/2/6450822/editor-html/6989644.png);
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    scale: 4;
+    
+    transform: translate(0, -50%);  /* Move a imagem 50% para a esquerda no eixo horizontal */
 }
 
+        </style>
+</head>
 
-        .demo{
-                position: relative;  
-                z-index: 2;
-                scale:100%;
-                font-size: 2em;
-                font-family: Arial, Helvetica, sans-serif;
-                
-               
-                
-        }
+<body>
 
-        .botao {
-                
-                position: relative;
-        }
+        <div class="titulo">
+                <span> <a style="text-decoration: none; color: inherit; display: flex;"
+                                href="../marises-machine/Digo Machine.html"> <img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" a
+                                        alt=""> DigoMachine <b>br</b> </a></span>
+        </div>
 
-        /* Quadrado preto atrás dos elementos */
-        .overlay {
-
-                position: absolute;
-                top: 10%;
-                left: 25%;
-                width: 50%;
-                height: 70%;
-                background-color: rgba(17, 17, 17, 0.788);
-                background-blend-mode: screen;
-                z-index: 1;
-        }
-
-        span {
-
-                /* texto */
-                font-size: 2em;
-                font-weight: bolder;
-                font-style: italic;
-                unicode-bidi: isolate;
-                color: black;
-                text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-                background-color: rgb(255, 255, 255);
-                background-size: 2000px 2000px;
-
-
-                /* borda arrendondada */
-                border-radius: 25px;
-                padding: 20px;
-                width: 200px;
-                height: 150px;
-                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-
-        }
-
-        b {
-
-
-
-                position: relative;
-                color: white;
-                text-shadow: -1px 0 2px black, 0 1px 2px black, 1px 0 2px black, 0 -1px 2px black;
-                padding: 5px;
-                width: 200px;
-                height: 150px;
-                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                z-index: 2;
-        }
-
-        h3 {
-
-
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                position: relative;
-                z-index: 2;
-                font-size: 2em;
-                color: white;
-                text-shadow: -2px 0 2px black, 0 1px 2px black, 1px 0 2px black, 0 -1px 2px black;
-
-
-        }
-</style>
-
-<center>
-        <span>MATRIX Machine</span>
-
-        <div class="obstaculo"></div>
 
         <br><br>
+        <center>
+                 <div class="curio"></div>
+                <div class="overlay"> </div>
+                <div class="calculadora">
+                        <h3>Decimal</h3>
+                        <input oninput="converter()" id="inputValue" type="number"
+                                placeholder="Digite o valor em decimal">
+                        <br><br>
 
-        <h3>Decimal</h3>
-        <input oninput="converter()" id="demo1" type="number" placeholder="Digite o valor em decimal">
+                        <h3>converter para:</h3>
 
-        <br><br>
+                        <b>Decimal</b>
+                        <br>
+                        <div style="display: block; background-color: #dcdcdc; border-radius: 5px; padding: 1px; color: rgb(7, 7, 7); width: 15%; min-height: 20px; font-weight: 500;"
+                                class="demo" id="demo1"></div>
 
-        <h3>converter para:</h3>
+                        <br><br>
 
+                        <b>Octal</b>
+                        <br>
+                        <div style="display: block; background-color: #dcdcdc; border-radius: 5px; padding: 1px; color: rgb(0, 0, 0); width: 15%; min-height: 20px; font-weight: 500;"
+                                class="demo" id="demo2"></div>
 
-        <b>Octal</b>
-        <br>
-        <div style="display: block; background-color: #dcdcdc; border-radius: 5px; padding: 1px; color: rgb(0, 0, 0); width: 15%; min-height: 20px; font-weight: 500;"
-                class="demo" id="demo2"></div>
+                        <br><br>
 
-        <br><br>
+                        <b>Hexadecimal</b>
+                        <br>
+                        <div style="display: block; background-color: #dcdcdc; border-radius: 5px; padding: 1px; color: rgb(7, 7, 7); width: 15%; min-height: 20px; font-weight: 500;"
+                                class="demo" id="demo3"></div>
 
-        <b>Hexadecimal</b>
-        <br>
-        <div style="display:block none; background-color: #dcdcdc; border-radius: 5px; padding: 1px; color: rgb(7, 7, 7); width: 15%; min-height: 20px; font-weight: 500;"
-                class="demo" id="demo3"></div>
+                        <br><br>
 
-        <br><br>
+                        <b>Binário</b>
+                        <br>
+                        <div style="display: block; background-color: #dcdcdc; border-radius: 5px; padding: 1px; color: rgb(5, 5, 5); width: 40%; min-height: 20px; font-weight: 500;"
+                                class="demo" id="demo4"></div>
 
-        <b>Binário</b>
-        <br>
-        <div style="display: block; background-color: #dcdcdc; border-radius: 5px; padding: 1px; color: rgb(5, 5, 5); width: 40%; min-height: 20px; font-weight: 500;"
-                class="demo" id="demo4"></div>
+                        <br><br>
 
-        <br><br>
-
-        
-
-        <!-- botao de converter -->
-         
-        <!-- <button onclick="converter()">Converter</button> -->
-
-        <div class="overlay"></div>
-
-
-</center>
-
-
-
-<script>
-
-
-        function converter() {
-
-                var decimal = Number(demo1.value);
-
-                let octal = decimal.toString(8);
-
-                let hexadecimal = decimal.toString(16);
-
-                let binaria = decimal.toString(2);
-
-                console.log(decimal);
-                console.log(octal);
-                console.log(hexadecimal);
-                console.log(binaria);
-
-                document.getElementById("demo1").innerHTML = ` ${decimal}`;
-                document.getElementById("demo2").innerHTML = ` ${octal}`;
-                document.getElementById("demo3").innerHTML = ` ${hexadecimal}`;
-                document.getElementById("demo4").innerHTML = ` ${binaria}`;
+                        <select class="select" onchange="converter()" id="inputBase">
+                                <option value="decimal">Decimal</option>
+                                <option value="hexadecimal">Hexadecimal</option>
+                                <option value="octal">Octal</option>
+                                <option value="binario">Binário</option>
+                        </select>
+                </div>
 
 
-        }
+        </center>
 
-        function aparecer_bin() {
-                demo4.style.display = 'block'
-        }
+        <script>
 
-        function aparecer_hexa() {
-                demo3.style.display = 'block'
-        }
+                function converter() {
+                        var inputValue = document.getElementById('inputValue').value;
+                        var inputBase = document.getElementById('inputBase').value;
 
-        function aparecer_octal() {
-                demo2.style.display = 'block'
-        }
-        document.bgColor = "#00ffff";
-</script>
+                        if (!validarEntrada(inputValue, inputBase)) {
+                                alert('Por favor, insira um número válido para a base selecionada.');
+                                return;
+                        }
+
+
+                        if (inputBase === 'decimal') {
+
+                                document.getElementById("demo1").style.borderRadius = '30px'
+                                document.getElementById("inputValue").type = 'number'
+                        } else if (inputBase === 'hexadecimal') {
+
+                                document.getElementById("inputValue").type = 'text'
+                        } else if (inputBase === 'octal') {
+
+                                document.getElementById("inputValue").type = 'number'
+                        } else if (inputBase === 'binario') {
+
+                                document.getElementById("inputValue").type = 'number'
+                        }
+
+
+                        var decimalValue = parseInt(inputValue, inputBase === 'hexadecimal' ? 16 : inputBase === 'octal' ? 8 : inputBase === 'binario' ? 2 : 10);
+
+
+                        document.getElementById("demo1").innerHTML = `${decimalValue}`;
+                        document.getElementById("demo2").innerHTML = `${decimalValue.toString(8)}`;
+                        document.getElementById("demo3").innerHTML = `${decimalValue.toString(16).toUpperCase()}`;
+                        document.getElementById("demo4").innerHTML = `${decimalValue.toString(2)}`;
+
+
+                }
+
+                function validarEntrada(inputValue, inputBase) {
+                        var validChars = '';
+
+                        if (inputBase === 'decimal') {
+                                validChars = '0123456789';
+                        } else if (inputBase === 'hexadecimal') {
+                                validChars = '0123456789ABCDEFabcdef';
+                        } else if (inputBase === 'octal') {
+                                validChars = '01234567';
+                        } else if (inputBase === 'binario') {
+                                validChars = '01';
+                        }
+
+                        for (var i = 0; i < inputValue.length; i++) {
+                                if (validChars.indexOf(inputValue[i]) === -1) {
+                                        return false;
+                                }
+                        }
+                        return true;
+                }
+        </script>
 </body>
 
 </html>
+
+<!-- O tema da calculadora será 'YouTube' -->
